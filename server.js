@@ -32,4 +32,4 @@ io.on('connection', socket => {
         socket.broadcast.emit('receivedMessage', data);
     })
 })
-server.listen(3003);
+server.listen(process.env.PORT || 3003);
