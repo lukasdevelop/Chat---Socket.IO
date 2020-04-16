@@ -20,7 +20,7 @@
         <button type="submit">Enviar</button>
     </form>
     <script type="text/javascript">
-        var socket = io.connect('http://localhost:3003')
+        var socket = io.connect();
 
         socket.on('previousMessages', function(messages) {
             for(message of messages){

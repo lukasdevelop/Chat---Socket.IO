@@ -6,6 +6,10 @@ const cors = require('cors');
 const server = require('http').createServer(app);
 const io = require('socket.io')(server)
 
+require('dotenv/config')
+console.log(process.env.APP_URL) 
+
+
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'public'))
